@@ -1,8 +1,39 @@
 import "../../VKUI/src/styles/styles.css";
+import {INITIAL_VIEWPORTS} from "@storybook/addon-viewport"
 import { Platform } from "@vkontakte/vkui";
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
+  viewport: {
+    viewports: {
+      ...INITIAL_VIEWPORTS,
+      ipad_horizontal: {
+        name: 'iPad (Horizontal)',
+        styles: {
+          height: '768px',
+          width: '1024px',
+        },
+        type: 'tablet',
+      },
+      ipad10p_horizontal: {
+        name: 'iPad Pro 10.5-in (Horizontal)',
+        styles: {
+          height: '834px',
+          width: '1112px',
+        },
+        type: 'tablet',
+      },
+      ipad12p_horizontal: {
+        name: 'iPad Pro 12.9-in (Horizontal)',
+        styles: {
+          height: '1024px',
+          width: '1366px',
+        },
+        type: 'tablet',
+      },
+    },
+    // defaultView port: "Large mobile",
+  },
 };
 
 export { decorators } from "./decorators";
