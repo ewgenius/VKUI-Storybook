@@ -32,7 +32,6 @@ export const parameters = {
         type: 'tablet',
       },
     },
-    // defaultView port: "Large mobile",
   },
 };
 
