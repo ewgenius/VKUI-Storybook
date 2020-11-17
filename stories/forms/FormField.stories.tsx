@@ -7,10 +7,7 @@ import {
   Avatar,
   Chip,
   NativeSelect,
-  SelectMimicry,
   Textarea,
-  Group,
-  Header,
   Select,
   SizeType,
 } from "@vkontakte/vkui";
