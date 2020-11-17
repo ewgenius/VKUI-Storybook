@@ -12,6 +12,7 @@ import {
   Group,
   Header,
   Select,
+  SizeType,
 } from "@vkontakte/vkui";
 
 export default {
@@ -25,17 +26,24 @@ export function Default() {
   };
   return (
     <FormLayout onSubmit={onSubmit}>
-      <Group header={<Header>Input</Header>}>
-        <FormItem top="email">
-          <Input name="email" type="email" />
-        </FormItem>
-        <FormItem top="password">
-          <Input name="password" type="password" />
-        </FormItem>
-      </Group>
+      <FormItem top="Input">
+        <Input name="email" type="email" />
+      </FormItem>
+
+      <FormItem top="Input compact">
+        <Input name="password" sizeY={SizeType.COMPACT} type="password" />
+      </FormItem>
 
       <FormItem top="TextArea">
         <Textarea name="address" placeholder="address" />
+      </FormItem>
+
+      <FormItem top="TextArea compact">
+        <Textarea
+          name="address"
+          placeholder="address"
+          sizeY={SizeType.COMPACT}
+        />
       </FormItem>
 
       <FormItem top="ChipsInput">
@@ -77,8 +85,16 @@ export function Default() {
         </Select>
       </FormItem>
 
-      <FormItem top="SelectMimicry">
-        <SelectMimicry>test</SelectMimicry>
+      <FormItem top="Select compact">
+        <Select
+          placeholder="country"
+          sizeY={SizeType.COMPACT}
+          autoComplete="address"
+          name="country"
+        >
+          <option value="Россия">Россия</option>
+          <option value="США">США</option>
+        </Select>
       </FormItem>
     </FormLayout>
   );
