@@ -9,5 +9,5 @@ fi
 git clone https://github.com/VKCOM/VKUI.git
 cd VKUI
 git fetch origin fix/formfield-autofill
-git checkout fix/formfield-autofill
+git checkout v4
 yarn
