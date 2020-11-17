@@ -8,6 +8,6 @@ fi
 
 git clone https://github.com/VKCOM/VKUI.git
 cd VKUI
-git fetch origin v4
-git checkout v4
+git fetch origin fix/formfield-autofill
+git checkout fix/formfield-autofill
 yarn
