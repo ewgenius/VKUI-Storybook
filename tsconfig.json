@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "rootDir": "./",
+    "jsx": "react",
+    "esModuleInterop": true,
+    "paths": {
+      "@vkontakte/vkui": ["../VKUI"],
+      "@vkontakte/vkui/*": ["../VKUI/*"]
+    }
+  },
+  // "references": [
+  //   {
+  //     "path": "../VKUI/tsconfig.json"
+  //   }
+  // ],
+  /// "include": ["../VKUI/src"]
+}

@@ -1,0 +1,26 @@
+{
+  "name": "VKUI-Storybook",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "storybook": "NODE_PATH=../VKUI/node_modules:./node_modules start-storybook -p 3000",
+    "vkui-dev": "cd ../VKUI && yarn dev-all",
+    "prebuild": "./setup.sh",
+    "build": "NODE_PATH=../VKUI/node_modules:./node_modules build-storybook"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.12.3",
+    "@storybook/addon-actions": "^6.0.28",
+    "@storybook/addon-essentials": "^6.0.28",
+    "@storybook/addon-links": "^6.0.28",
+    "@storybook/react": "^6.0.28",
+    "@vkontakte/icons": "^1.53.0",
+    "babel-loader": "^8.1.0",
+    "react-is": "^16.13.1"
+  },
+  "dependencies": {}
+}
