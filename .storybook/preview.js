@@ -1,6 +1,6 @@
 import '../../VKUI/src/styles/styles.css';
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
-import { Platform } from '@vkontakte/vkui';
+import { Platform, WebviewType } from '@vkontakte/vkui';
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
@@ -79,6 +79,24 @@ export const globalTypes = {
         {
           value: Platform.ANDROID,
           title: 'ANDROID',
+        },
+      ],
+    },
+  },
+
+  webview: {
+    name: 'Webview',
+    description: 'VKUI Webview Type',
+    defaultValue: WebviewType.INTERNAL,
+    toolbar: {
+      items: [
+        {
+          value: WebviewType.INTERNAL,
+          title: 'internal',
+        },
+        {
+          value: WebviewType.VKAPPS,
+          title: 'vkapps',
         },
       ],
     },

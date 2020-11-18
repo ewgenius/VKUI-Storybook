@@ -5,8 +5,9 @@ export const decorators = [
   (Story, context) => {
     const scheme = context.globals.scheme;
     const platform = context.globals.platform;
+    const webview = context.globals.webview;
     return (
-      <ConfigProvider scheme={scheme} platform={platform}>
+      <ConfigProvider scheme={scheme} platform={platform} webviewType={webview}>
         <div
           className="vkui-preview"
           style={{

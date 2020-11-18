@@ -36,7 +36,7 @@ export default {
 
 export function Default() {
   const platform = usePlatform();
-  const [activeModal, setActiveModal] = useState<string | null>(null);
+  const [activeModal, setActiveModal] = useState<string | null>('modalPage1');
   const openCardModal1 = () => setActiveModal('modalCard1');
   const openCardModal2 = () => setActiveModal('modalCard2');
   const openPageModal1 = () => setActiveModal('modalPage1');
