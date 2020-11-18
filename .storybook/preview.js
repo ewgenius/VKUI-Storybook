@@ -1,5 +1,4 @@
 import '../../VKUI/src/styles/styles.css';
-import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
 import { Platform, WebviewType } from '@vkontakte/vkui';
 
 export const parameters = {
@@ -11,30 +10,45 @@ export const parameters = {
   },
   viewport: {
     viewports: {
-      ...INITIAL_VIEWPORTS,
-      ipad_horizontal: {
-        name: 'iPad (Horizontal)',
-        styles: {
-          height: '768px',
-          width: '1024px',
-        },
-        type: 'tablet',
+      small_mobile: {
+        name: 'small mobile',
+        type: 'mobile',
+        styles: { width: '300px', height: '640px' },
       },
-      ipad10p_horizontal: {
-        name: 'iPad Pro 10.5-in (Horizontal)',
-        styles: {
-          height: '834px',
-          width: '1112px',
-        },
-        type: 'tablet',
+      mobile: {
+        name: 'mobile',
+        type: 'mobile',
+        styles: { width: '320px', height: '720px' },
       },
-      ipad12p_horizontal: {
-        name: 'iPad Pro 12.9-in (Horizontal)',
-        styles: {
-          height: '1024px',
-          width: '1366px',
-        },
-        type: 'tablet',
+      small_tablet: {
+        name: 'small tablet',
+        type: 'mobile',
+        styles: { width: '788px', height: '1024px' },
+      },
+      small_tablet_horizontal: {
+        name: 'small tablet horizontal',
+        type: 'mobile',
+        styles: { width: '1024px', height: '768px' },
+      },
+      tablet: {
+        name: 'tablet',
+        type: 'mobile',
+        styles: { width: '1024px', height: '1366px' },
+      },
+      tablet_horizontal: {
+        name: 'tablet horizontal',
+        type: 'mobile',
+        styles: { width: '1366px', height: '1024px' },
+      },
+      small_desktop: {
+        name: 'small desktop (height < 720)',
+        type: 'desktop',
+        styles: { width: '1280px', height: '640px' },
+      },
+      desktop: {
+        name: 'desktop',
+        type: 'desktop',
+        styles: { width: '1280px', height: '780px' },
       },
     },
   },
