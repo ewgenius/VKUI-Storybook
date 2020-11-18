@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react';
 import {
   Input,
   FormLayout,
@@ -10,10 +10,10 @@ import {
   Textarea,
   Select,
   SizeType,
-} from "@vkontakte/vkui";
+} from '@vkontakte/vkui';
 
 export default {
-  title: "Forms/FormField",
+  title: 'Forms/FormField',
   component: Input,
 };
 
@@ -49,11 +49,11 @@ export function Default() {
           type="email"
           readOnly
           value={[
-            { value: "1", label: "Arctic Monkeys", src: "" },
-            { value: "2", label: "Звери", src: "" },
-            { value: "4", label: "FACE", src: "" },
-            { value: "3", label: "Depeche Mode", src: "" },
-            { value: "5", label: "Linkin Park", src: "" },
+            { value: '1', label: 'Arctic Monkeys', src: '' },
+            { value: '2', label: 'Звери', src: '' },
+            { value: '4', label: 'FACE', src: '' },
+            { value: '3', label: 'Depeche Mode', src: '' },
+            { value: '5', label: 'Linkin Park', src: '' },
           ]}
           renderChip={({ value, label, option: { src }, ...rest }) => (
             <Chip

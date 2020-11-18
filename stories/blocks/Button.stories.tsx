@@ -1,9 +1,9 @@
-import * as React from "react";
-import { Button, Div } from "@vkontakte/vkui";
-import { Icon16Add, Icon24Camera, Icon24Shuffle } from "@vkontakte/icons";
+import * as React from 'react';
+import { Button, Div } from '@vkontakte/vkui';
+import { Icon16Add, Icon24Camera, Icon24Shuffle } from '@vkontakte/icons';
 
 export default {
-  title: "Blocks/Button",
+  title: 'Blocks/Button',
   component: Button,
 };
 
@@ -16,33 +16,33 @@ export function Default({ text, ...buttonProps }) {
 }
 
 Default.args = {
-  text: "button text",
-  mode: "primary",
+  text: 'button text',
+  mode: 'primary',
   stretched: false,
-  size: "m",
+  size: 'm',
 };
 
 Default.argTypes = {
   mode: {
     control: {
-      type: "select",
+      type: 'select',
       options: [
-        "primary",
-        "secondary",
-        "tertiary",
-        "outline",
-        "commerce",
-        "destructive",
-        "overlay_primary",
-        "overlay_secondary",
-        "overlay_outline",
+        'primary',
+        'secondary',
+        'tertiary',
+        'outline',
+        'commerce',
+        'destructive',
+        'overlay_primary',
+        'overlay_secondary',
+        'overlay_outline',
       ],
     },
   },
   size: {
     control: {
-      type: "select",
-      options: ["s", "m", "l"],
+      type: 'select',
+      options: ['s', 'm', 'l'],
     },
   },
 };
@@ -68,13 +68,13 @@ export function ButtonTypes() {
       <Div>
         <Button mode="destructive">Destructive</Button>
       </Div>
-      <Div style={{ background: "#232323" }}>
+      <Div style={{ background: '#232323' }}>
         <Button mode="overlay_primary">Overlay Primary</Button>
       </Div>
-      <Div style={{ background: "#232323" }}>
+      <Div style={{ background: '#232323' }}>
         <Button mode="overlay_secondary">Overlay Secondary</Button>
       </Div>
-      <Div style={{ background: "#232323" }}>
+      <Div style={{ background: '#232323' }}>
         <Button mode="overlay_outline">Overlay Outline</Button>
       </Div>
     </>
@@ -103,7 +103,7 @@ export function ButtonStretch() {
       <Div>
         <Button size="l">No stretch</Button>
       </Div>
-      <Div style={{ display: "flex" }}>
+      <Div style={{ display: 'flex' }}>
         <Button size="l" stretched style={{ marginRight: 8 }}>
           Stretched
         </Button>

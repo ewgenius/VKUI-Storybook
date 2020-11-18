@@ -1,5 +1,5 @@
-import React from "react";
-import {ConfigProvider} from "@vkontakte/vkui";
+import React from 'react';
+import { ConfigProvider } from '@vkontakte/vkui';
 
 export const decorators = [
   (Story, context) => {
@@ -10,7 +10,8 @@ export const decorators = [
         <div
           className="vkui-preview"
           style={{
-            backgroundColor: scheme === "bright_light" ? "#fff" : "rgb(25, 25, 26)",
+            backgroundColor:
+              scheme === 'bright_light' ? '#fff' : 'rgb(25, 25, 26)',
           }}
         >
           <Story />
