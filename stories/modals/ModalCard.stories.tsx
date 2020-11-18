@@ -39,7 +39,8 @@ export function Default() {
   const [activeModal, setActiveModal] = useState<string | null>(null);
   const openCardModal1 = () => setActiveModal('modalCard1');
   const openCardModal2 = () => setActiveModal('modalCard2');
-  const openPageModal = () => setActiveModal('modalPage1');
+  const openPageModal1 = () => setActiveModal('modalPage1');
+  const openPageModal2 = () => setActiveModal('modalPage2');
   const closeModal = () => setActiveModal(null);
   return (
     <AdaptivityProvider>
@@ -126,18 +127,6 @@ export function Default() {
                   </Radio>
                 </FormItem>
 
-                <FormItem top="Пол">
-                  <Radio name="sex" value={0} defaultChecked>
-                    Любой
-                  </Radio>
-                  <Radio name="sex" value={1}>
-                    Мужской
-                  </Radio>
-                  <Radio name="sex" value={2}>
-                    Женский
-                  </Radio>
-                </FormItem>
-
                 <FormItem top="Школа">
                   <SelectMimicry placeholder="Выбрать школу" disabled />
                 </FormItem>
@@ -168,6 +157,34 @@ export function Default() {
                 </FormItem>
               </Group>
             </ModalPage>
+
+            <ModalPage
+              id="modalPage2"
+              onClose={closeModal}
+              header={
+                <ModalPageHeader
+                  right={
+                    <PanelHeaderButton onClick={closeModal}>
+                      {platform === Platform.IOS ? 'Готово' : <Icon24Done />}
+                    </PanelHeaderButton>
+                  }
+                >
+                  Фильтры
+                </ModalPageHeader>
+              }
+            >
+              <Group>
+                <FormItem top="Дата рождения">
+                  <DatePicker
+                    min={{ day: 1, month: 1, year: 1901 }}
+                    max={{ day: 1, month: 1, year: 2006 }}
+                    dayPlaceholder="Д"
+                    monthPlaceholder="ММ"
+                    yearPlaceholder="ГГ"
+                  />
+                </FormItem>
+              </Group>
+            </ModalPage>
           </ModalRoot>
         }
       >
@@ -178,8 +195,13 @@ export function Default() {
             </Button>
           </Div>
           <Div>
-            <Button stretched onClick={openPageModal}>
+            <Button stretched onClick={openPageModal1}>
               Open modal page 1
+            </Button>
+          </Div>
+          <Div>
+            <Button stretched onClick={openPageModal2}>
+              Open modal page 2
             </Button>
           </Div>
         </Panel>
