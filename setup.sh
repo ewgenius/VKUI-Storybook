@@ -8,6 +8,6 @@ fi
 
 git clone https://github.com/VKCOM/VKUI.git
 cd VKUI
-git fetch origin fix/formfield-autofill
-git checkout v4
+git fetch origin feature/adaptive-modals
+git checkout feature/adaptive-modals
 yarn
