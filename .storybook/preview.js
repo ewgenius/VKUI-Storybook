@@ -4,6 +4,11 @@ import { Platform } from '@vkontakte/vkui';
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
+  previewTabs: {
+    'storybook/docs/panel': {
+      hidden: true,
+    },
+  },
   viewport: {
     viewports: {
       ...INITIAL_VIEWPORTS,
